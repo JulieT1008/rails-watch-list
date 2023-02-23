@@ -1,0 +1,7 @@
+<%= simple_form_for [list, bookmark] do |f| %>
+  <div class="form-content">
+    <%= f.input :movie_id, collection: Movie.all %>
+    <%= f.input :comment %>
+  </div>
+  <%= f.button :submit, class: "form-btn" %>
+<% end %>

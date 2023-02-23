@@ -1,0 +1,15 @@
+<div class="container-index">
+  <div class="cards">
+    <h1>MovieLists</h1>
+    <% @lists.each do |list| %>
+      <div class="card-list">
+        <p class="card-title"><%= list.name %></p>
+        <p>A selection of films, just for you, to enjoy an amazing experience alone, with friends or family.</p>
+        <p class="card-btn"><%= link_to "Ckeck this list", list_path(list) %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="card-image">
+    <%= image_tag "poster.jpg", alt: "movie-poster", width: 500 %>
+  </div>
+</div>

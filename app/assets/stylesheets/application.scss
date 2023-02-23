@@ -1,0 +1,171 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Roboto:wght@100;300;400&display=swap');
+
+body {
+  background-color: #f9f3ee;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: black;
+  margin: 10px 30px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Gloock', serif;
+  font-weight: 400;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #da91fa;
+  font-weight: 400;
+}
+
+.container{
+  margin: 10px 20px;
+}
+
+.card-list {
+  background-color: #f2e6d9;
+  width: 600px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-btn {
+  font-size: 15px;
+  width: 120px;
+  font-family: 'Gloock', serif;
+  border: 1px solid;
+  border-radius: 20px;
+  padding : 5px 10px;
+}
+
+.card-btn:hover {
+  border-color: #da91fa;
+  color: #da91fa;
+}
+
+h1 {
+  padding : 11px;
+  width: 625px;
+  border-bottom: 1px solid black;
+}
+
+.container-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+  margin: 0px 10px
+}
+
+.card-image {
+  padding : 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-image img {
+  border-radius: 20px;
+}
+
+.card-show-btn {
+  font-size: 15px;
+  width: 230px;
+  font-family: 'Gloock', serif;
+  border: 1px solid;
+  border-radius: 20px;
+  padding : 5px 10px;
+}
+
+.card-show-btn:hover {
+  border-color: #da91fa;
+  color: #da91fa;
+}
+
+.card-show {
+  background-color: #f2e6d9;
+  width: 600px;
+  padding: 10px 20px;
+  margin: 15px 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+.container-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+}
+
+.card-show-image  {
+  width: 160px;
+}
+
+.card-show-image img {
+  border-radius: 20px;
+  width: 150px;
+}
+
+.card-show-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-show-content {
+  width: 350px;
+}
+
+.form h2 {
+  padding : 11px;
+  width: 625px;
+  border-bottom: 1px solid black;
+}
+.rating {
+  font-size: 12px;
+}
+
+.form-btn {
+  font-size: 15px;
+  width: 160px;
+  font-family: 'Gloock', serif;
+  border: 1px solid;
+  border-radius: 20px;
+  padding : 5px 10px;
+}
+
+.form-btn:hover {
+  border-color: #da91fa;
+  color: #da91fa;
+}
+
+.form-content {
+  margin: 30px 0px;
+  width: 625px;
+}
