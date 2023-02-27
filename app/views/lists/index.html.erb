@@ -2,11 +2,22 @@
   <div class="cards">
     <h1>MovieLists</h1>
     <% @lists.each do |list| %>
-      <div class="card-list">
-        <p class="card-title"><%= list.name %></p>
-        <p>A selection of films, just for you, to enjoy an amazing experience alone, with friends or family.</p>
-        <p class="card-btn"><%= link_to "Ckeck this list", list_path(list) %></p>
-      </div>
+      <% if list.photo.key %>
+        <div class="card-list-with-img">
+          <%= cl_image_tag list.photo.key, crop: :fill %>
+          <div class="card-list-with-img-content">
+            <p class="card-title"><%= list.name %></p>
+            <p>A selection of films, just for you, to enjoy an amazing experience alone, with friends or family.</p>
+            <p class="card-btn"><%= link_to "Ckeck this list", list_path(list) %></p>
+          </div>
+        </div>
+      <% else %>
+        <div class="card-list">
+          <p class="card-title"><%= list.name %></p>
+          <p>A selection of films, just for you, to enjoy an amazing experience alone, with friends or family.</p>
+          <p class="card-btn"><%= link_to "Ckeck this list", list_path(list) %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div class="card-image">

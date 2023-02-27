@@ -27,6 +27,12 @@ h1, h2, h3, h4 {
   color: black;
 }
 
+h1 {
+  padding : 11px;
+  width: 625px;
+  border-bottom: 1px solid black;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -37,22 +43,51 @@ a:hover {
   font-weight: 400;
 }
 
-.container{
-  margin: 10px 20px;
-}
+// CARD - Index - show
 
 .card-list {
   background-color: #f2e6d9;
   width: 600px;
+  height: 150px;
   padding: 10px 20px;
   margin: 20px 10px;
   border-radius: 10px;
+}
+
+.card-list-with-img {
+  background-color: #f2e6d9;
+  width: 600px;
+  height: 150px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 130px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+}
+
+.card-image {
+  padding : 20px;
+  display: flex;
+  justify-content: center;
+  img {
+    border-radius: 20px;
+    width: 550px;
+    height: 800px;
+    margin-top: 10px;
+  }
 }
 
 .card-title {
   font-size: 20px;
   font-weight: 400;
 }
+
+// BUTTON -index show new
 
 .card-btn {
   font-size: 15px;
@@ -68,11 +103,7 @@ a:hover {
   color: #da91fa;
 }
 
-h1 {
-  padding : 11px;
-  width: 625px;
-  border-bottom: 1px solid black;
-}
+// CONTAINER - Index show
 
 .container-index {
   display: grid;
@@ -82,17 +113,14 @@ h1 {
   margin: 0px 10px
 }
 
-.card-image {
-  padding : 20px;
+.container {
+  margin: 0px 30px;
+  padding: 0px;
   display: flex;
-  justify-content: center;
 }
 
-.card-image img {
-  border-radius: 20px;
-  width: 550px;
-  height: 800px;
-  margin-top: 10px;
+.container-cards {
+  margin-left: 30px;
 }
 
 .card-show-btn {
@@ -102,9 +130,10 @@ h1 {
   border: 1px solid;
   border-radius: 20px;
   padding : 5px 10px;
+
 }
 
-.card-show-btn:hover {
+.card-show-btnhover {
   border-color: #da91fa;
   color: #da91fa;
 }
@@ -121,7 +150,7 @@ h1 {
   justify-content: center;
 }
 
-.container-show {
+.cards-show {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0px;
@@ -143,6 +172,10 @@ h1 {
 
 .card-show-content {
   width: 350px;
+}
+
+.form {
+  margin-left: 30px;
 }
 
 .form h2 {
@@ -169,6 +202,6 @@ h1 {
 }
 
 .form-content {
-  margin: 30px 0px;
+  margin: 40px 30px;
   width: 625px;
 }

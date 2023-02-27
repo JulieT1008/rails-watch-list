@@ -1,21 +1,51 @@
-<h1><%= @list.name %></h1>
-<div class="container-show">
-  <% @list.bookmarks.each do |bookmark| %>
-    <div class="card-show">
-      <div class="card-show-image">
-        <%= image_tag bookmark.movie.poster_url, alt: "movie-poster", width: 200 %>
-      </div>
-      <div class="card-show-content">
-        <p class="card-title"><%= bookmark.movie.title%></p>
-        <p class="rating"><%= bookmark.movie.rating %>/5</p>
-        <p><%= bookmark.movie.overview %></p>
-        <p>My comment : <%= bookmark.comment %></p>
-        <br>
-        <p class="card-show-btn"><%= link_to "Delete this movie from my list", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></p>
+<% if @list.photo.key %>
+  <div class="container">
+    <div class="card-image">
+      <%= cl_image_tag @list.photo.key, crop: :fill %>
+    </div>
+    <div class="container-cards">
+      <h1><%= @list.name %></h1>
+      <div class="cards-show">
+        <% @list.bookmarks.each do |bookmark| %>
+          <div class="card-show">
+            <div class="card-show-image">
+              <%= image_tag bookmark.movie.poster_url, alt: "movie-poster", width: 200 %>
+            </div>
+            <div class="card-show-content">
+              <p class="card-title"><%= bookmark.movie.title%></p>
+              <p class="rating"><%= bookmark.movie.rating %>/5</p>
+              <p><%= bookmark.movie.overview %></p>
+              <p>My comment : <%= bookmark.comment %></p>
+              <br>
+              <p class="card-show-btn"><%= link_to "Delete this movie from my list", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></p>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
-  <% end %>
-</div>
+  </div>
+<% else %>
+  <div class="container-cards">
+    <h1><%= @list.name %></h1>
+    <div class="cards-show">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="card-show">
+          <div class="card-show-image">
+            <%= image_tag bookmark.movie.poster_url, alt: "movie-poster", width: 200 %>
+          </div>
+          <div class="card-show-content">
+            <p class="card-title"><%= bookmark.movie.title%></p>
+            <p class="rating"><%= bookmark.movie.rating %>/5</p>
+            <p><%= bookmark.movie.overview %></p>
+            <p>My comment : <%= bookmark.comment %></p>
+            <br>
+            <p class="card-show-btn"><%= link_to "Delete this movie from my list", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 
 <div class="form">
   <h2>Add a movie to this list :</h2>
